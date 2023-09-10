@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+overflow: hidden;
+    
+    background: linear-gradient(to right, blue,black);
+}
+.clock{
+    background-color: rgba(3, 3, 48, 0.85);
+    height: 400px;
+    width:400px;
+    border-radius: 50%;
+    position: relative;
+    border: 5px solid gold;
+}
+.clock .number{
+    --rotation:0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(var(--rotation));
+    text-align: center;
+    color: gold;
+font-size: 1.2rem;
+font-weight: 800;}
+
+
+
+.clock .number1{--rotation:30deg;
+color: gold;
+font-weight: 600;}
+
+    .clock .number2{
+        --rotation:60deg;
+        color: gold;}
+    
+
+        .clock .number3{
+            --rotation:90deg;
+            color: gold;}
+        
+            .clock .number4{
+                --rotation:120deg;
+                color: gold;
+            color: gold;}
+
+            
+                .clock .number5{
+                    --rotation:150deg;
+                    color: gold;}
+                
+                    .clock .number6{
+                        --rotation:180deg;
+                        color: gold;}
+                    
+                        .clock .number7{
+                            --rotation:210deg;
+                            color: gold;}
+                        
+                            .clock .number8{
+                                --rotation:240deg;
+                                color: gold;}
+                            
+                                .clock .number9{
+                                    --rotation:270deg;
+                                    color: gold;}
+                                
+                                    .clock .number10{
+                                        --rotation:300deg;
+                                        color: gold;}
+                                    
+                                        .clock .number11{
+                                            --rotation:330deg;
+                                            color: gold;}
+                                        
+.clock .hand{
+position: absolute;
+height: 45%;
+width: 10px;
+background-color: black;
+bottom: 50%;
+left: 50%;
+z-index:10; 
+--rotation:30;
+transform: translate(-50%) rotate(calc(var(--rotation)*1deg));
+transform-origin: bottom;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border: 2px solid white;
+
+}
+
+.clock .hand.seconds{
+    width: 8px;
+    height: 45%;
+    background-color: gold;
+}
+.clock .hand.minutes{
+    width: 7px;
+    height: 40%;
+    background-color: gold;
+
+}
+.clock .hand.hour{
+    width: 10px;
+    height: 32%;
+    background-color: gold;
+}
+.clock::after{
+    content: '';
+    position: absolute;
+    background-color: rgb(237, 221, 221);
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
